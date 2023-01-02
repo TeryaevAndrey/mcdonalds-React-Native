@@ -10,7 +10,7 @@ export const COLORS = {
 export const SIZES = {
   base: 8,
   font: 14, 
-  radius: 12,
+  radius: 20,
   padding: 24, 
 
   h1: 30,
