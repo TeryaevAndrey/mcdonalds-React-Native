@@ -1,15 +1,21 @@
 import React from "react";
-import { View } from 'react-native';
-import Header from "./src/components/Header";
-import Categories from "./src/components/Categories";
-import Popular from "./src/components/Popular";
+import styled from "styled-components/native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import AuthScreen from "./screens/AuthScreen";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={{padding: 24, paddingTop: 55}}>
-      <Header />
-      <Categories />
-      <Popular />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Auth">
+        <Stack.Screen
+          name="Auth"
+          component={AuthScreen}
+          options={{title: "Auth", headerShown: false}}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
