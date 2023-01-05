@@ -4,7 +4,8 @@ import styled from "styled-components/native";
 import AuthInput from "./AuthInput";
 import Tabs from "./Tabs";
 import IconAnt from "react-native-vector-icons/AntDesign";
-import IconFontisto from "react-native-vector-icons/Fontisto"
+import IconFontisto from "react-native-vector-icons/Fontisto";
+import Socials from "./Socials/Socials";
 
 const Wrapper = styled.View`
   position: relative;
@@ -22,14 +23,50 @@ const Inputs = styled.View`
   margin-top: 60px;
 `;
 
+const Btn = styled.TouchableOpacity`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 101px;
+  width: 100%;
+  min-height: 36px;
+  border-radius: 40px;
+  background: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ff2211;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 9px 30px;
+`;
+
+const BtnText = styled.Text`
+  font-size: 13px;
+  font-weight: 700;
+  color: #ff2211;
+`;
+
+const Line = styled.View`
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  margin-top: 40px;
+  opacity: 0.5;
+`;
+
 const LoginForm = () => {
   const [userName, setUserName] = React.useState("");
   const [password, setPassword] = React.useState("");
 
   return (
-      <Wrapper>
-      <LinearGradient 
-        colors={['rgba(255, 255, 255, 0.7)', 'rgba(255, 255, 255, 0.15)']}
+    <Wrapper>
+      <LinearGradient
+        colors={["rgba(255, 255, 255, 0.7)", "rgba(255, 255, 255, 0.15)"]}
         style={{
           position: "absolute",
           left: 0,
@@ -37,15 +74,32 @@ const LoginForm = () => {
           top: 0,
           bottom: 0,
           borderRadius: "20px",
-          opacity: 0.55,
+          opacity: 0.35,
         }}
-      >
-      </LinearGradient>
+      />
+      
       <Tabs />
       <Inputs>
-        <AuthInput img={<IconAnt name="user" color="#ccc" size={20} />} placeholder="Username or Email" onChangeText={text => setUserName(text)} value={userName} />
-        <AuthInput img={<IconFontisto name="unlocked" color="#ccc" size={20} />} placeholder="Password" isPassword={true} mt onChangeText={text => setPassword(text)} value={password} />
+        <AuthInput
+          img={<IconAnt name="user" color="#ccc" size={20} />}
+          placeholder="Username or Email"
+          onChangeText={(text) => setUserName(text)}
+          value={userName}
+        />
+        <AuthInput
+          img={<IconFontisto name="unlocked" color="#ccc" size={20} />}
+          placeholder="Password"
+          isPassword={true}
+          mt
+          onChangeText={(text) => setPassword(text)}
+          value={password}
+        />
       </Inputs>
+      <Btn>
+        <BtnText>Login</BtnText>
+      </Btn>
+      <Line />
+      <Socials />
     </Wrapper>
   );
 };

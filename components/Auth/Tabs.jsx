@@ -47,7 +47,7 @@ const Tabs = () => {
         <BtnText active={activeTab === 0 ? true : false}>Sign in</BtnText>
       </Btn>
       <Btn active={activeTab === 1 ? true : false} onPress={() => dispatch(setActiveTab(1))}>
-        <BtnText active={activeTab === 1 ? true : false}>Sign in</BtnText>
+        <BtnText active={activeTab === 1 ? true : false}>Sign up</BtnText>
       </Btn>
     </Wrapper>
   );
