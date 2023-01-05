@@ -6,6 +6,7 @@ import Tabs from "./Tabs";
 import IconAnt from "react-native-vector-icons/AntDesign";
 import IconFontisto from "react-native-vector-icons/Fontisto";
 import Socials from "./Socials/Socials";
+import BlurView, { VibrancyView } from "@react-native-community/blur";
 
 const Wrapper = styled.View`
   position: relative;
@@ -65,6 +66,7 @@ const LoginForm = () => {
 
   return (
     <Wrapper>
+
       <LinearGradient
         colors={["rgba(255, 255, 255, 0.7)", "rgba(255, 255, 255, 0.15)"]}
         style={{
@@ -77,7 +79,7 @@ const LoginForm = () => {
           opacity: 0.35,
         }}
       />
-      
+    
       <Tabs />
       <Inputs>
         <AuthInput

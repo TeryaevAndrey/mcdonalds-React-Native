@@ -25,7 +25,7 @@ const RegForm = () => {
           top: 0,
           bottom: 0,
           borderRadius: "20px",
-          opacity: 0.55,
+          opacity: 0.35,
         }}
       >
       </LinearGradient>
