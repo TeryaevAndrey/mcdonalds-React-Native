@@ -1,6 +1,7 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React from "react";
 import styled from "styled-components/native";
+import AuthInput from "./AuthInput";
 import Tabs from "./Tabs";
 
 const Wrapper = styled.View`
@@ -11,6 +12,13 @@ const Wrapper = styled.View`
   padding: 35px 49px;
   border-radius: 20px;
   border: 0.97549px solid rgba(255, 255, 255, 0.3);
+`;
+
+const Inputs = styled.View`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 60px;
 `;
 
 const LoginForm = () => {
@@ -30,6 +38,9 @@ const LoginForm = () => {
       >
       </LinearGradient>
       <Tabs />
+      <Inputs>
+        <AuthInput />
+      </Inputs>
     </Wrapper>
   );
 };
