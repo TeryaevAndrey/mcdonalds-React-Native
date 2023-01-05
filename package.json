@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-navigation/native": "^6.1.1",
     "@react-navigation/native-stack": "^6.9.7",
+    "@reduxjs/toolkit": "^1.9.1",
     "expo": "~47.0.9",
     "expo-linear-gradient": "~12.0.1",
     "expo-status-bar": "~1.4.2",
@@ -20,6 +21,8 @@
     "react-native-radial-gradient": "^1.1.2",
     "react-native-safe-area-context": "4.4.1",
     "react-native-screens": "~3.18.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {

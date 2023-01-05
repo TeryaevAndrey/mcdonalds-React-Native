@@ -1,6 +1,7 @@
 import React from "react";
-import { Text } from "react-native";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components/native";
+import { setActiveTab } from "../../store/authSlice";
 
 const Wrapper = styled.View`
   display: flex;
@@ -37,14 +38,15 @@ const BtnText = styled.Text`
 `;
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = React.useState(0);
+  const dispatch = useDispatch();
+  const activeTab = useSelector(state => state.auth.activeTab);
 
   return (
     <Wrapper>
-      <Btn active={activeTab === 0 ? true : false} onPress={() => setActiveTab(0)}>
+      <Btn active={activeTab === 0 ? true : false} onPress={() => dispatch(setActiveTab(0))}>
         <BtnText active={activeTab === 0 ? true : false}>Sign in</BtnText>
       </Btn>
-      <Btn active={activeTab === 1 ? true : false} onPress={() => setActiveTab(1)}>
+      <Btn active={activeTab === 1 ? true : false} onPress={() => dispatch(setActiveTab(1))}>
         <BtnText active={activeTab === 1 ? true : false}>Sign in</BtnText>
       </Btn>
     </Wrapper>
