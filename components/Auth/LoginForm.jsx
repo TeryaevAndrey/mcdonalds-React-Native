@@ -3,6 +3,8 @@ import React from "react";
 import styled from "styled-components/native";
 import AuthInput from "./AuthInput";
 import Tabs from "./Tabs";
+import IconAnt from "react-native-vector-icons/AntDesign";
+import IconFontisto from "react-native-vector-icons/Fontisto"
 
 const Wrapper = styled.View`
   position: relative;
@@ -17,11 +19,13 @@ const Wrapper = styled.View`
 const Inputs = styled.View`
   display: flex;
   flex-direction: column;
-  gap: 20px;
   margin-top: 60px;
 `;
 
 const LoginForm = () => {
+  const [userName, setUserName] = React.useState("");
+  const [password, setPassword] = React.useState("");
+
   return (
       <Wrapper>
       <LinearGradient 
@@ -39,7 +43,8 @@ const LoginForm = () => {
       </LinearGradient>
       <Tabs />
       <Inputs>
-        <AuthInput />
+        <AuthInput img={<IconAnt name="user" color="#ccc" size={20} />} placeholder="Username or Email" onChangeText={text => setUserName(text)} value={userName} />
+        <AuthInput img={<IconFontisto name="unlocked" color="#ccc" size={20} />} placeholder="Password" isPassword={true} mt onChangeText={text => setPassword(text)} value={password} />
       </Inputs>
     </Wrapper>
   );
