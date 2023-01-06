@@ -76,7 +76,7 @@ const LoginForm = () => {
           top: 0,
           bottom: 0,
           borderRadius: "20px",
-          opacity: 0.35,
+          opacity: 0.5,
         }}
       />
     

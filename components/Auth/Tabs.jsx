@@ -11,7 +11,7 @@ const Wrapper = styled.View`
   padding: 3px;
   background-color: #fff;
   border-radius: 15px;
-  margin-top: 45px;
+  margin-top: 10px;
   min-height: 31px;
   max-width: 256px;
   width: 100%;
