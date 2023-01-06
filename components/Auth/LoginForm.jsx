@@ -60,7 +60,7 @@ const Line = styled.View`
   opacity: 0.5;
 `;
 
-const LoginForm = () => {
+const LoginForm = ({navigation}) => {
   const [userName, setUserName] = React.useState("");
   const [password, setPassword] = React.useState("");
 
@@ -97,7 +97,7 @@ const LoginForm = () => {
           value={password}
         />
       </Inputs>
-      <Btn>
+      <Btn onPress={() => navigation.navigate("Home")}>
         <BtnText>Login</BtnText>
       </Btn>
       <Line />

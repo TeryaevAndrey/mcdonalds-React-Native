@@ -18,7 +18,7 @@ const WrapperForms = styled.View`
   height: 100%;
 `;
 
-const AuthScreen = () => {
+const AuthScreen = ({navigation}) => {
   const activeTab = useSelector(state => state.auth.activeTab);
 
   return (
@@ -26,7 +26,7 @@ const AuthScreen = () => {
       <ImageBackground source={require("../assets/bg.jpg")} resizeMode="cover" style={{height: "100%"}}>
         <WrapperForms>
           {
-            activeTab === 0 ? <LoginForm /> : <RegForm />
+            activeTab === 0 ? <LoginForm navigation={navigation} /> : <RegForm />
           }
         </WrapperForms>
       </ImageBackground>
