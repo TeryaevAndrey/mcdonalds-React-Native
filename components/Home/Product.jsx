@@ -5,9 +5,8 @@ import { Path, Svg } from "react-native-svg";
 import IconIonicons from "react-native-vector-icons/Ionicons";
 
 const Wrapper = styled.View`
-  max-width: 153px;
-  width: 100%;
-  min-height: 181px;
+  width: 153px;
+  height: 195px;
   background: #fff;
   border-radius: 20px;
   border-width: 1px;
@@ -15,6 +14,7 @@ const Wrapper = styled.View`
   border-color: #f6f6f6;
   position: relative;
   padding: 10px;
+  margin-right: 15px;
 `;
 
 const Img = styled.Image`
@@ -56,7 +56,7 @@ const AddIcon = styled.TouchableOpacity`
   bottom: 6px;
 `;
 
-const Product = ({ title, price }) => {
+const Product = ({ title, price, img }) => {
   return (
     <Wrapper>
       <LikeImg>

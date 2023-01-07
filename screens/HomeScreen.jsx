@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "styled-components/native";
 import Header from '../components/Header/Header';
-import Product from '../components/Home/Product';
+import PopularProducts from '../components/Home/PopularProducts';
+import Stocks from '../components/Home/Stocks';
 import Search from '../components/Search';
 import Sidebar from '../components/Sidebar/Sidebar';
 
@@ -17,6 +18,8 @@ const HomeScreen = () => {
     <Wrapper>
       <Header />
       <Search />
+      <Stocks />
+      <PopularProducts />
       <Sidebar />
     </Wrapper>
   );
