@@ -1,7 +1,7 @@
 import React from "react";
-import { Image, ScrollView, Text, View } from "react-native";
+import { Dimensions, Image, ScrollView, Text, View } from "react-native";
 import styled from "styled-components/native";
-import stocksData from "./stocksData";
+import { stocksData } from "./stocksData";
 
 const Wrapper = styled.View`
   margin-top: 7px;
@@ -13,26 +13,63 @@ const Wrapper = styled.View`
 `;
 
 const Stocks = () => {
+  const [activeEl, setActiveEl] = React.useState(0);
+
+  const onChangeActiveEl = ({ nativeEvent }) => {
+    const slide = Math.ceil(
+      nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width
+    );
+
+    if (slide !== activeEl) {
+      setActiveEl(slide);
+    }
+  };
+
   return (
     <Wrapper>
       <ScrollView
         pagingEnabled
         horizontal
         showsHorizontalScrollIndicator={false}
+        onScroll={onChangeActiveEl}
       >
         {stocksData.map((item, index) => {
-          return <Image key={index} source={{ uri: item }} style={{width: "100%", height: "100%"}} />;
+          return (
+            <Image
+              key={index}
+              source={item}
+              resizeMode="cover"
+              style={{
+                width: Dimensions.get("window").width - 40,
+                height: "100%",
+              }}
+            />
+          );
         })}
       </ScrollView>
       <View
         style={{
           flexDirection: "row",
           position: "absolute",
-          bottom: 0,
+          bottom: 6,
           alignSelf: "center",
         }}
       >
-        <Text style={{ color: "#fff" }}>⬤</Text>
+        {stocksData.map((item, index) => {
+          return (
+            <Text
+              key={index}
+              style={{
+                color: activeEl === index ? "#A5A3A3" : "#EFEFEF",
+                fontSize: 5,
+                marginLeft: 2,
+                marginRight: 2
+              }}
+            >
+              ⬤
+            </Text>
+          );
+        })}
       </View>
     </Wrapper>
   );
