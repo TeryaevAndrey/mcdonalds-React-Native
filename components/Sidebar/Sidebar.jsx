@@ -5,6 +5,7 @@ import IconOcticons from "react-native-vector-icons/Octicons";
 import IconFontAwesome5 from "react-native-vector-icons/FontAwesome5";
 import IconFontisto from "react-native-vector-icons/Fontisto";
 import IconIonicons from "react-native-vector-icons/Ionicons";
+import Profile from './Profile';
 
 const Wrapper = styled.View`
   display: flex;
@@ -28,6 +29,7 @@ const Sidebar = () => {
       <SidebarItem img={<IconFontAwesome5 name="clipboard-list" size="30" color="#8A8A8A" />} />
       <SidebarItem img={<IconFontisto name="heart-alt" size="25" color="#8A8A8A" />} />
       <SidebarItem img={<IconIonicons name="notifications-outline" size="30" color="#8A8A8A" />} />
+      <Profile />
     </Wrapper>
   );
 };
