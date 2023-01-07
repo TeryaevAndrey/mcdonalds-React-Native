@@ -1,8 +1,8 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
+import { ScrollView } from "react-native";
 import styled from "styled-components/native";
 import Product from "./Product";
-import { productsPopularData } from "./productsPopularData";
+import { productsComboData } from "./productsComboData";
 
 const Wrapper = styled.View`
   width: 100%;
@@ -13,14 +13,14 @@ const Title = styled.Text`
   font-weight: 600;
   line-height: 24px;
   margin-left: 45px;
-  margin-top: 22px;
+  margin-top: 10px;
   margin-bottom: 10px;
 `;
 
-const PopularProducts = () => {
+const ComboProducts = () => {
   return (
     <Wrapper>
-      <Title>Popular Items</Title>
+      <Title>Combo best seller</Title>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -28,12 +28,19 @@ const PopularProducts = () => {
           paddingHorizontal: 20,
         }}
       >
-        {productsPopularData.map((item, index) => {
-          return <Product key={index} img={item.img} title={item.title} price={item.price} />;
+        {productsComboData.map((item, index) => {
+          return (
+            <Product
+              key={index}
+              img={item.img}
+              title={item.title}
+              price={item.price}
+            />
+          );
         })}
       </ScrollView>
     </Wrapper>
   );
 };
 
-export default PopularProducts;
+export default ComboProducts;

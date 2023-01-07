@@ -63,7 +63,7 @@ const Stocks = () => {
                 color: activeEl === index ? "#A5A3A3" : "#EFEFEF",
                 fontSize: 5,
                 marginLeft: 2,
-                marginRight: 2
+                marginRight: 2,
               }}
             >
               ⬤

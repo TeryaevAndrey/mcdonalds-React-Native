@@ -75,7 +75,7 @@ const Product = ({ title, price, img }) => {
       </LikeImg>
 
       <Img
-        source={require("../../assets/products/1.png")}
+        source={img}
         resizeMode="contain"
       />
       <Title>{title}</Title>

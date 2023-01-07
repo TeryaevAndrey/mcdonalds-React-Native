@@ -1,10 +1,12 @@
-import React from 'react';
+import React from "react";
+import { ScrollView } from "react-native";
 import styled from "styled-components/native";
-import Header from '../components/Header/Header';
-import PopularProducts from '../components/Home/PopularProducts';
-import Stocks from '../components/Home/Stocks';
-import Search from '../components/Search';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Header from "../components/Header/Header";
+import ComboProducts from "../components/Home/ComboProducts";
+import PopularProducts from "../components/Home/PopularProducts";
+import Stocks from "../components/Home/Stocks";
+import Search from "../components/Search";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 const Wrapper = styled.View`
   height: 100%;
@@ -19,7 +21,10 @@ const HomeScreen = () => {
       <Header />
       <Search />
       <Stocks />
-      <PopularProducts />
+      <ScrollView showsHorizontalScrollIndicator={false}>
+        <PopularProducts />
+        <ComboProducts />
+      </ScrollView>
       <Sidebar />
     </Wrapper>
   );
