@@ -8,6 +8,7 @@ import { View } from "react-native";
 
 const Wrapper = styled.View`
   margin-top: 13px;
+  margin-bottom: auto;
 `;
 
 const ProfileBtns = () => {

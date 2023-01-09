@@ -5,8 +5,7 @@ import IconMaterialIcons from "react-native-vector-icons/MaterialIcons";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Wrapper = styled.ImageBackground`
-  max-height: 338px;
-  height: 100%;
+  height: 338px;
 `;
 
 const Header = styled.View`
