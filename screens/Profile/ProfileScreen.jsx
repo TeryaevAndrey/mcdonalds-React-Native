@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from "styled-components/native";
+import ProfileBtns from '../../components/Profile/ProfileBtns/ProfileBtns';
 import ProfileHeader from '../../components/Profile/ProfileHeader';
 
 const Wrapper = styled.View`
@@ -9,7 +10,8 @@ const Wrapper = styled.View`
 const ProfileScreen = ({navigation}) => {
   return (
     <Wrapper>
-      <ProfileHeader navigation={navigation.navigate("Profile")} />
+      <ProfileHeader navigation={navigation} />
+      <ProfileBtns />
     </Wrapper>
   );
 };
