@@ -6,6 +6,7 @@ import AuthScreen from "./screens/AuthScreen";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import HomeScreen from "./screens/HomeScreen";
+import Profile from "./screens/Profile/ProfileScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,7 +14,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-      <Stack.Navigator initialRouteName="Auth">
+      <Stack.Navigator initialRouteName="Profile">
         <Stack.Screen
           name="Auth"
           component={AuthScreen}
@@ -23,6 +24,11 @@ export default function App() {
           name="Home"
           component={HomeScreen}
           options={{title: "Home", headerShown: false}}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{title: "Profile", headerShown: false}}
         />
       </Stack.Navigator>
     </NavigationContainer>

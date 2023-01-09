@@ -27,14 +27,14 @@ const LocationText = styled.Text`
   color: #000;
 `;
 
-const Header = () => {
+const Header = ({navigation}) => {
   return (
     <Wrapper>
       <Location>
         <IconIonicons name="md-location-sharp" size="33" color="#D52B1E" />
         <LocationText>Your location ...</LocationText>
       </Location>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
         <IconAntDesign name="shoppingcart" size="33" color="#000" />
       </TouchableOpacity>
     </Wrapper>

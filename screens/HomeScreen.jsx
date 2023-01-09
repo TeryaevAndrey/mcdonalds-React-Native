@@ -15,10 +15,10 @@ const Wrapper = styled.View`
   background: #fff;
 `;
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
   return (
     <Wrapper>
-      <Header />
+      <Header navigation={navigation} />
       <Search />
       <Stocks />
       <ScrollView showsHorizontalScrollIndicator={false}>
