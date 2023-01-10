@@ -11,12 +11,12 @@ const Wrapper = styled.View`
   background: #fff;
 `;
 
-const Notification = ({ navigation }) => {
+const Notification = ({navigation}) => {
   return (
     <Wrapper>
       <NotificationHeader navigation={navigation} />
       <NotificationList />
-      <Sidebar />
+      <Sidebar navigation={navigation} />
     </Wrapper>
   );
 };

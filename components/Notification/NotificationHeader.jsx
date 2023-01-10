@@ -27,7 +27,7 @@ const ClearText = styled.Text`
   margin-left: 4px;
 `;
 
-const NotificationHeader = ({ navigation }) => {
+const NotificationHeader = () => {
   return (
     <Wrapper>
       <ClearBtn>

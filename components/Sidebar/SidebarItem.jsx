@@ -9,9 +9,9 @@ const Wrapper = styled.TouchableOpacity`
   align-items: center;
 `;  
 
-const SidebarItem = ({img}) => {
+const SidebarItem = ({img, onPress}) => {
   return (
-    <Wrapper>
+    <Wrapper onPress={onPress}>
       {img}
     </Wrapper>
   );

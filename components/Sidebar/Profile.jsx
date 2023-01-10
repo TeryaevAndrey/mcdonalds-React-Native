@@ -9,9 +9,9 @@ const Wrapper = styled.TouchableOpacity`
   overflow: hidden;
 `;
 
-const Profile = () => {
+const Profile = ({onPress}) => {
   return (
-    <Wrapper>
+    <Wrapper onPress={onPress}>
       <Image source={require("../../assets/sidebar/avatar.jpg")} resizeMode="contain" />
     </Wrapper>
   );

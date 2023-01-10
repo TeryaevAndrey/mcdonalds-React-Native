@@ -25,7 +25,7 @@ const HomeScreen = ({navigation}) => {
         <PopularProducts />
         <ComboProducts />
       </ScrollView>
-      <Sidebar />
+      <Sidebar navigation={navigation} />
     </Wrapper>
   );
 };
