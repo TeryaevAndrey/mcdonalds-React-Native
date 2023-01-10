@@ -8,9 +8,9 @@ const Wrapper = styled.TouchableOpacity`
   position: relative;
 `;
 
-const Back = ({ onPress, color }) => {
+const Back = ({ onPress, color, style }) => {
   return (
-    <Wrapper onPress={onPress}>
+    <Wrapper onPress={onPress} style={style}>
       <Svg
         width="23"
         height="24"

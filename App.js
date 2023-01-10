@@ -8,6 +8,7 @@ import { store } from "./store/store";
 import HomeScreen from "./screens/HomeScreen";
 import Profile from "./screens/Profile/ProfileScreen";
 import Notification from "./screens/Notification";
+import Cart from "./screens/Cart";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Auth">
+        <Stack.Navigator initialRouteName="Cart">
           <Stack.Screen
             name="Auth"
             component={AuthScreen}
@@ -34,7 +35,12 @@ export default function App() {
           <Stack.Screen
             name="Notification"
             component={Notification}
-            options={{ title: "Notification", headerShown: false, animation: "none" }}
+            options={{ title: "Notification", headerShown: false, animation: "slide_from_bottom"}}
+          />
+          <Stack.Screen
+            name="Cart"
+            component={Cart}
+            options={{ title: "Cart", headerShown: false, animation: "flip"}}
           />
         </Stack.Navigator>
       </NavigationContainer>
