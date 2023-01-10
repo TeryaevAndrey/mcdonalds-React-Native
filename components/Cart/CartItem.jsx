@@ -8,6 +8,7 @@ const Wrapper = styled.View`
   align-items: flex-start;
   min-height: 139px;
   width: 100%;
+  margin-top: ${props => props.mt ? "26px" : "0"}
 `;
 
 const ImgWrapper = styled.View`
@@ -79,9 +80,9 @@ const Input = styled.TextInput`
   padding: 8px 10px;
 `;
 
-const CartItem = () => {
+const CartItem = ({mt}) => {
   return (
-    <Wrapper>
+    <Wrapper mt={mt}>
       <ImgWrapper>
         <Img
           source={require("../../assets/cart/products/1.png")}

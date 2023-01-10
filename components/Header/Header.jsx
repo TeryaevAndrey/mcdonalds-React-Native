@@ -34,7 +34,7 @@ const Header = ({navigation}) => {
         <IconIonicons name="md-location-sharp" size="33" color="#D52B1E" />
         <LocationText>Your location ...</LocationText>
       </Location>
-      <TouchableOpacity onPress={() => navigation.navigate("Profile")}>
+      <TouchableOpacity onPress={() => navigation.navigate("Cart")}>
         <IconAntDesign name="shoppingcart" size="33" color="#000" />
       </TouchableOpacity>
     </Wrapper>

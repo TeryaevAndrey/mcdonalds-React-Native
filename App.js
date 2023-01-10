@@ -16,7 +16,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Cart">
+        <Stack.Navigator initialRouteName="Auth">
           <Stack.Screen
             name="Auth"
             component={AuthScreen}
@@ -35,12 +35,18 @@ export default function App() {
           <Stack.Screen
             name="Notification"
             component={Notification}
-            options={{ title: "Notification", headerShown: false, animation: "slide_from_bottom"}}
+            options={{
+              title: "Notification",
+              headerShown: false,
+              animation: "slide_from_bottom",
+              gestureEnabled: false,
+              headerLeft: () => <></>,
+            }}
           />
           <Stack.Screen
             name="Cart"
             component={Cart}
-            options={{ title: "Cart", headerShown: false, animation: "flip"}}
+            options={{ title: "Cart", headerShown: false, animation: "flip" }}
           />
         </Stack.Navigator>
       </NavigationContainer>

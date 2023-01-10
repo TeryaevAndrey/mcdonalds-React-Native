@@ -26,7 +26,7 @@ const Title= styled.Text`
 const CartHeader = ({navigation}) => {
   return (
     <Wrapper>
-      <Back onPress={navigation.goBack()} color="#000" style={{marginRight: 'auto'}} />
+      <Back onPress={() => navigation.goBack()} color="#000" style={{marginRight: 'auto'}} />
       <Title>Cart</Title>
     </Wrapper>
   );
