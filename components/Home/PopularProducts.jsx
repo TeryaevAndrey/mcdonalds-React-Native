@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, View } from "react-native";
 import styled from "styled-components/native";
-import Product from "./Product";
+import Product from "../Product";
 import { productsPopularData } from "./productsPopularData";
 
 const Wrapper = styled.View`

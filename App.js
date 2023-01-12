@@ -9,6 +9,7 @@ import HomeScreen from "./screens/HomeScreen";
 import Profile from "./screens/Profile/ProfileScreen";
 import Notification from "./screens/Notification";
 import Cart from "./screens/Cart";
+import Favourite from "./screens/Favourite";
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +48,11 @@ export default function App() {
             name="Cart"
             component={Cart}
             options={{ title: "Cart", headerShown: false, animation: "flip" }}
+          />
+          <Stack.Screen
+            name="Favourite"
+            component={Favourite}
+            options={{ title: "Favourite", headerShown: false, animation: "slide_from_bottom" }}
           />
         </Stack.Navigator>
       </NavigationContainer>

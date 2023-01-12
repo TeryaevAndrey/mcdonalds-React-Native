@@ -39,6 +39,7 @@ const Sidebar = ({navigation}) => {
       }} img={<IconFontAwesome5 name="clipboard-list" size="30" color={activePage === 1 ? "#D52B1E" : "#8A8A8A"} />} />
       <SidebarItem onPress={() => {
         dispatch(setActivePage(2))
+        navigation.navigate("Favourite")
       }} img={<IconFontisto name="heart-alt" size="25" color={activePage === 2 ? "#D52B1E" : "#8A8A8A"} />} />
       <SidebarItem onPress={() => {
         dispatch(setActivePage(3))
